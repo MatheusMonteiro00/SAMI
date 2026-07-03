@@ -20,6 +20,7 @@
   "homepage": "https://github.com/MatheusMonteiro00/SAMI---Sistema-Automatizado-de-Monitoramento-de-Infraestrutura.#readme",
   "devDependencies": {
     "@types/node": "^20.19.43",
+    "@types/ping": "^0.4.4",
     "dotenv": "^17.4.2",
     "prisma": "^6.19.3",
     "tsx": "^4.22.5",
@@ -29,5 +30,9 @@
     "@prisma/engines@7.8.0": true,
     "esbuild@0.28.1": true,
     "prisma@7.8.0": true
+  },
+  "dependencies": {
+    "@prisma/client": "^7.8.0",
+    "ping": "^1.0.0"
   }
 }
