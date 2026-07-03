@@ -1,14 +1,37 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Get a free hosted Postgres database in seconds: `npx create-db`
-
 generator client {
-  provider = "prisma-client"
-  output   = "../generated/prisma"
+  provider = "prisma-client-js"
 }
 
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+}
+
+model Host {
+  id         String    @id @default(uuid())
+  name       String
+  ipAddress  String    @unique @map("ip_address")
+
+  status     String    @default("UNKNOWN") // ONLINE | OFFLINE | UNKNOWN
+
+  createdAt  DateTime  @default(now()) @map("created_at")
+  updatedAt  DateTime  @updatedAt @map("updated_at")
+
+  pingLogs   PingLog[]
+
+  @@map("hosts")
+}
+
+model PingLog {
+  id         String   @id @default(uuid())
+
+  hostId     String   @map("host_id")
+  host       Host     @relation(fields: [hostId], references: [id], onDelete: Cascade)
+
+  status     String   // ONLINE | OFFLINE
+  latencyMs  Float    @map("latency_ms")
+
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  @@map("ping_logs")
 }
