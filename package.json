@@ -1,0 +1,33 @@
+{
+  "name": "projeto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatheusMonteiro00/SAMI---Sistema-Automatizado-de-Monitoramento-de-Infraestrutura..git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/MatheusMonteiro00/SAMI---Sistema-Automatizado-de-Monitoramento-de-Infraestrutura./issues"
+  },
+  "homepage": "https://github.com/MatheusMonteiro00/SAMI---Sistema-Automatizado-de-Monitoramento-de-Infraestrutura.#readme",
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "dotenv": "^17.4.2",
+    "prisma": "^6.19.3",
+    "tsx": "^4.22.5",
+    "typescript": "^6.0.3"
+  },
+  "allowScripts": {
+    "@prisma/engines@7.8.0": true,
+    "esbuild@0.28.1": true,
+    "prisma@7.8.0": true
+  }
+}
