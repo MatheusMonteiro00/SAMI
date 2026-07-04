@@ -6,6 +6,19 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+model Host {
+  id         String   @id @default(uuid())
+  name       String
+  ipAddress  String   @unique @map("ip_address")
+  status     String   @default("UNKNOWN")
+
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  pingLogs   PingLog[]
+
+  @@map("hosts")
+}
 
 
 
