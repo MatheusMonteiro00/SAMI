@@ -6,7 +6,7 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-O **SAMI** é um sistema de monitoramento de infraestrutura desenvolvido em **Node.js + TypeScript**, responsável por verificar periodicamente a disponibilidade de hosts cadastrados em um banco de dados PostgreSQL.
+A **SAMI** é um sistema de monitoramento de infraestrutura desenvolvido em **Node.js + TypeScript**, responsável por verificar periodicamente a disponibilidade de hosts cadastrados em um banco de dados PostgreSQL.
 
 O objetivo é automatizar a verificação de disponibilidade de servidores e equipamentos de rede, registrando o histórico de cada verificação para futuras consultas e análises.
 ---
