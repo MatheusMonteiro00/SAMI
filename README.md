@@ -41,7 +41,6 @@ O objetivo é automatizar a verificação de disponibilidade de servidores e equ
 - [ ] Estatísticas de latência
 - [ ] Docker
 - [ ] Autenticação
-- [ ] Deploy em nuvem
 
 ---
 
